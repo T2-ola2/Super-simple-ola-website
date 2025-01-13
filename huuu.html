@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Layout</title>
+    <style>
+        /* Reset default margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+        }
+
+        /* Top navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .search-bar {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .navbar .search-bar input {
+            width: 100%;
+            max-width: 300px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .navbar .icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar .icons img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        /* Feed layout */
+        .feed {
+            margin-top: 70px; /* Space for the fixed navbar */
+            padding: 20px;
+        }
+
+        .post {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .post img {
+            width: 100%;
+            display: block;
+        }
+
+        .post .details {
+            padding: 10px;
+        }
+
+        .post .details h4 {
+            margin-bottom: 5px;
+        }
+
+        .post .details p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Bottom navigation bar */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .footer img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">Instagram</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="icons">
+            <img src="home-icon.png" alt="Home">
+            <img src="message-icon.png" alt="Messages">
+            <img src="heart-icon.png" alt="Notifications">
+        </div>
+    </div>
+
+    <!-- Feed Section -->
+    <div class="feed">
+        <div class="post">
+            <img src="post1.jpg" alt="Post 1">
+            <div class="details">
+                <h4>@username</h4>
+                <p>Caption for the post...</p>
+            </div>
+        </div>
+        <div class="post">
+            <img src="post2.jpg" alt="Post 2">
+            <div class="details">
+                <h4>@anotheruser</h4>
+                <p>Another caption...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Navigation Bar -->
+    <div class="footer">
+        <img src="home-icon.png" alt="Home">
+        <img src="search-icon.png" alt="Search">
+        <img src="reels-icon.png" alt="Reels">
+        <img src="shop-icon.png" alt="Shop">
+        <img src="profile-icon.png" alt="Profile">
+    </div>
+</body>
+</html>
